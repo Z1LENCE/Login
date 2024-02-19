@@ -6,6 +6,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from './Login'
 import Main from './Main'
 import Register from './Register'
+import Workflow from './Workflow'
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
@@ -14,6 +16,7 @@ root.render(
     <Route path='/login' element={<Login />}/>
     <Route path='/register' element={<Register />}/>
     <Route path='/main' element={<Main />}/>
+    <Route path='/Workflow' element={<Workflow />}/>
   </Routes>
   </BrowserRouter>,
   document.getElementById('root')

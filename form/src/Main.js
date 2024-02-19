@@ -20,12 +20,21 @@ import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import HomeIcon from '@mui/icons-material/Home';
-import InfoIcon from '@mui/icons-material/Info';
-import WorkIcon from '@mui/icons-material/Work';
+
+
+
 import ContactMailIcon from '@mui/icons-material/ContactMail';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
+import DashboardIcon from '@mui/icons-material/Dashboard';
+import ArticleIcon from '@mui/icons-material/Article';
+import PersonIcon from '@mui/icons-material/Person';
+import LocalOfferIcon from '@mui/icons-material/LocalOffer';
+import WorkIcon from '@mui/icons-material/Work';
+import GroupWorkIcon from '@mui/icons-material/GroupWork';
+import AssignmentIcon from '@mui/icons-material/Assignment';
+import GroupsIcon from '@mui/icons-material/Groups';
+import SettingsIcon from '@mui/icons-material/Settings';
 
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import ModeEditIcon from '@mui/icons-material/ModeEdit';
@@ -114,23 +123,30 @@ export default function Main() {
             </ListItem>
               <Tabs
                 orientation="vertical"
-                value={false} // Disable value to prevent Tab highlighting
+                value={false} 
               >
-                  <Tab icon={<HomeIcon />} label={<Link href="#" variant="body2" color="inherit">Home</Link>} />
-                  <Tab icon={<InfoIcon />} label={<Link href="#" variant="body2" color="inherit">About</Link>} />
-                  <Tab icon={<WorkIcon />} label={<Link href="#" variant="body2" color="inherit">Services</Link>} />
+                  <Tab icon={<DashboardIcon />} label={<Link href="#" variant="body2" color="inherit">Dashboard</Link>} />
+                  <Tab icon={<ArticleIcon />} label={<Link href="#" variant="body2" color="inherit">Document</Link>} />
+                  <Tab icon={<PersonIcon />} label={<Link href="#" variant="body2" color="inherit">Correspondents</Link>} />
+                  <Tab icon={<LocalOfferIcon />} label={<Link href="#" variant="body2" color="inherit">Tags</Link>} />
+                  <Tab icon={<WorkIcon />} label={<Link href="#" variant="body2" color="inherit">Workflow</Link>} />
+                  <Tab icon={<AssignmentIcon />} label={<Link href="#" variant="body2" color="inherit">Task</Link>} />
+                  <Tab icon={<GroupsIcon />} label={<Link href="#" variant="body2" color="inherit">User&group</Link>} />
+                  <Tab icon={<SettingsIcon />} label={<Link href="#" variant="body2" color="inherit">Setting</Link>} />
                   <Tab icon={<ContactMailIcon />} label={<Link href="#" variant="body2" color="inherit">Contact</Link>} />
+
               </Tabs>
             </List>
           </div>
         </Drawer>
       <main>
-        {/* Hero unit */}
-        <Box
+      
+        <Box //ของ dashboard
           sx={{
             bgcolor: 'background.paper',
             pt: 8,
             pb: 6,
+            
           }}
         >
           <Container maxWidth="sm">
@@ -145,7 +161,7 @@ export default function Main() {
             </Typography>
           </Container>
         </Box>
-        <Container sx={{ py: 3 }} maxWidth="md">
+        <Container sx={{ py: 3 }} maxWidth="xl">
           {/* End hero unit */}
           <Grid container spacing={4}>
             {cards.map((card) => (
@@ -165,11 +181,11 @@ export default function Main() {
                     <Typography gutterBottom variant="h5" component="h2">
                       File Name
                     </Typography>
-                    <Typography>
+                    <Typography /* สร้างแยก */>
                      Details
                     </Typography>
                   </CardContent>
-                  <CardActions sx={{ display: 'flex', justifyContent: 'center' }}>
+                  <CardActions sx={{ display: 'flex', justifyContent: 'space-between'}}>
                     <IconButton size="md" sx={{ mx: 4 }} aria-label="view">
                       <VisibilityIcon />
                     </IconButton>
