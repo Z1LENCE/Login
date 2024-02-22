@@ -7,6 +7,7 @@ import Login from './Login'
 import Main from './Main'
 import Register from './Register'
 import Workflow from './Workflow'
+import Tags from './Tags';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -17,6 +18,8 @@ root.render(
     <Route path='/register' element={<Register />}/>
     <Route path='/main' element={<Main />}/>
     <Route path='/Workflow' element={<Workflow />}/>
+    <Route path='/Tags' element={<Tags />}/>
+    
   </Routes>
   </BrowserRouter>,
   document.getElementById('root')
