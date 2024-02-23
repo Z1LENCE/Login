@@ -1,25 +1,11 @@
-import React, { useState } from 'react';
-import CustomAppBar from './CustomAppBar';
-import CustomDrawer from './CustomDrawer';
+import React from 'react';
+import CustomLayout from './CustomLayout';
 
 const Tags = () => {
-  const [openSidebar, setOpenSidebar] = useState(false);
-
-  const handleSidebarToggle = () => {
-    setOpenSidebar(!openSidebar);
-  };
-
-  const handleLogout = () => {
-    localStorage.removeItem('token');
-    window.location = '/login';
-  };
-
   return (
-    <>
-      <CustomAppBar onMenuClick={handleSidebarToggle} onLogout={handleLogout} />
-      <CustomDrawer open={openSidebar} onClose={() => setOpenSidebar(false)} />
+    <CustomLayout/>
       
-    </>
+    
   );
 };
 

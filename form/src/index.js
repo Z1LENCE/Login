@@ -8,6 +8,7 @@ import Main from './Main'
 import Register from './Register'
 import Workflow from './Workflow'
 import Tags from './Tags';
+import Setting from './Setting';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -19,6 +20,7 @@ root.render(
     <Route path='/main' element={<Main />}/>
     <Route path='/Workflow' element={<Workflow />}/>
     <Route path='/Tags' element={<Tags />}/>
+    <Route path='/Setting' element={<Setting />}/>
     
   </Routes>
   </BrowserRouter>,
