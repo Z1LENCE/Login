@@ -1,7 +1,7 @@
 import React from 'react'
 import CustomLayout from './CustomLayout'
 
-const Workflow = () => {
+const Tasks = () => {
     return (
       <CustomLayout/>
         
@@ -9,4 +9,4 @@ const Workflow = () => {
     );
   };
 
-export default Workflow
+export default Tasks
